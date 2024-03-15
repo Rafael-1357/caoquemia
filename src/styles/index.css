@@ -1,0 +1,20 @@
+:root {
+  --bg-color: #f7f5fa;
+  --text-purple: #772fa5;
+  --text-yellow: #ffc149;
+}
+
+.bg-root{
+  background: var(--bg-color);
+}
+
+#c1-left{
+  background-position: 100%;
+}
+
+#c2-left{
+  background-image: url('../imgs/bg-c1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
