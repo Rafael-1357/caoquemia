@@ -2,19 +2,48 @@
   --bg-color: #f7f5fa;
   --text-purple: #772fa5;
   --text-yellow: #ffc149;
+  --cherry-font-family: "Cherry Bomb One";
+  --gilroy-font-family: "Gilroy";
 }
 
-.bg-root{
+.color-white {
   background: var(--bg-color);
 }
 
-#c1-left{
-  background-position: 100%;
+.color-yellow {
+  color: var(--text-yellow);
 }
 
-#c2-left{
-  background-image: url('../imgs/bg-c1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 100%;
+.cherry {
+  font-family: var(--cherry-font-family);
 }
+
+.gilroy {
+  font-family:  var(--gilroy-font-family);
+}
+
+.bg-position {
+  background-position: right;
+  background-size: cover;
+}
+
+.corgi {
+  position: absolute;
+  bottom: 30px;
+}
+
+@media only screen and (min-width: 640px) and (orientation: landscape) { 
+
+  .bg-position{
+    background-position: -45vw;
+    background-size: 100% 100vh;
+  }
+
+  .corgi {
+    width: 40%;
+    right: 0;
+    
+  }
+
+}
+
