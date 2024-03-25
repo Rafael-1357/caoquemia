@@ -1,17 +1,29 @@
 :root {
-  --bg-color: #f7f5fa;
-  --text-purple: #772fa5;
-  --text-yellow: #ffc149;
+  --color-white: #f7f5fa;
+  --color-purple: #772fa5;
+  --color-yellow: #ffc149;
   --cherry-font-family: "Cherry Bomb One";
   --gilroy-font-family: "Gilroy";
 }
 
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-purple {
+  background: var(--color-purple);
+}
+
 .color-white {
-  background: var(--bg-color);
+  color: var(--color-white);
 }
 
 .color-yellow {
-  color: var(--text-yellow);
+  color: var(--color-yellow);
+}
+
+.color-purple {
+  color: var(--color-purple);
 }
 
 .cherry {
@@ -19,11 +31,12 @@
 }
 
 .gilroy {
-  font-family:  var(--gilroy-font-family);
+  font-family: var(--gilroy-font-family);
 }
 
 .bg-position {
   background-position: right;
+  background-size: auto 100vh;
 }
 
 .corgi {
@@ -31,17 +44,36 @@
   bottom: 30px;
 }
 
+.mobile {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 0 10px 0;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: #1d1d1dd8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu.mobile #nav{
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 1023px) {
-  
-  .bg-position{
-    background-size: 100vw 100vh;
+
+  .bg-position {
+    background-size: auto 100vh;
   }
 
 }
 
-@media only screen and (min-width: 640px) and (orientation: landscape) { 
+@media only screen and (min-width: 640px) and (orientation: landscape) {
 
-  .bg-position{
+  .bg-position {
     background-position: -40vw;
     background-size: 100% 100vh;
   }
@@ -49,8 +81,14 @@
   .corgi {
     width: 40%;
     right: 0;
-    
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  .btn-menu {
+    display: none;
   }
 
 }
-
