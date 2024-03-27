@@ -4,11 +4,14 @@ const nav = document.getElementById('nav');
 
 btnMenu.addEventListener('click', () => {
   if (menu.classList.toggle('mobile')) {
-    console.log('sim')
+    btnMenu.classList.remove('animate-spin-out')
+    btnMenu.classList.add('animate-spin-in')
     menu.classList.remove('hidden')
     return
   }
   menu.classList.add('hidden')
+  btnMenu.classList.add('animate-spin-out')
+  btnMenu.classList.remove('animate-spin-in')
   // menu.style.display = 'flex';
   // menu.classList.add('absolute');
   // menu.classList.add('top-0');

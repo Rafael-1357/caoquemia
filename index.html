@@ -8,13 +8,41 @@
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             clifford: '#da373d',
+          },
+          keyframes: {
+            'spin-in': {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(180deg)' },
+            },
+            'spin-out': {
+              '0%': { transform: 'rotate(180deg)' },
+              '100%': { transform: 'rotate(0deg)' },
+            },
+            'in-right': {
+              '0%': { transform: 'translateX(500px)' },
+              '100%': { transform: 'translateX(0px)' },
+            },
+            'in-left': {
+              '0%': { transform: 'translateX(-500px)' },
+              '100%': { transform: 'translateX(0px)' },
+            },
+            'in-button': {
+              '0%': { transform: 'translateY(500px)' },
+              '100%': { transform: 'translateY(0px)' },
+            }
+          },
+          animation: {
+            'spin-in': 'spin-in 0.5s ease-out',
+            'spin-out': 'spin-out 0.5s ease-in',
+            'in-right': 'in-right 0.5s ease-in-out',
+            'in-left': 'in-left 0.5s ease-in-out',
+            'in-button': 'in-button 0.5s ease-in-out',
           }
         }
       }
@@ -43,13 +71,13 @@
 <body>
   <main class="relative bg-white relative antialiased">
     <header id="header" class="w-full h-[120px] absolute px-[10%] flex justify-between items-center">
-      <img class="h-[60%] mr-[40px] z-30" src="./src/imgs/logo_caoquemia_white.png" alt="Logo Cão que Mia">
+      <img class="logo-responsive mr-[40px] z-30" src="./src/imgs/logo_caoquemia_white.png" alt="Logo Cão que Mia">
       <div id="menu" class="w-full justify-between items-center hidden z-20">
         <nav id="nav" class="flex gap-5 color-white gilroy">
-          <li class="list-none cursor-pointer">Home</li>
-          <li class="list-none cursor-pointer">Serviços</li>
-          <li class="list-none cursor-pointer">Sobre</li>
-          <li class="list-none cursor-pointer">Contato</li>
+          <li class="list-none cursor-pointer font-responsive">Home</li>
+          <li class="list-none cursor-pointer font-responsive">Serviços</li>
+          <li class="list-none cursor-pointer font-responsive">Sobre</li>
+          <li class="list-none cursor-pointer font-responsive">Contato</li>
         </nav>
         <div class="h-auto flex items-center gap-5">
           <p class="color-purple text-xl font-bold gilroy">(22) 992230016</p>
@@ -65,10 +93,11 @@
           </button>
         </div>
       </div>
-      <button id="btn-menu" class="btn-menu z-40"><i class="fa-brands fa-slack color-yellow text-[30px]"></i></button>
+      <button id="btn-menu" class="w-[30px] h-[30px] btn-menu z-40"><i
+          class="fa-brands fa-slack color-yellow text-[30px]"></i></button>
     </header>
     <div class="w-full h-screen bg-[url(./src/imgs/bg-c1.png)] bg-no-repeat bg-position overflow-hidden relative">
-      <img class="corgi" src="./src/imgs/dog-c1.png" alt="Corgi">
+      <img class="corgi animate-in-button sm:animate-in-right" src="./src/imgs/dog-c1.png" alt="Corgi">
     </div>
     <div class="w-full h-screen">
     </div>

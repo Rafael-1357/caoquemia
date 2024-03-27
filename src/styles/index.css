@@ -10,6 +10,14 @@
   background: var(--color-white);
 }
 
+.font-responsive {
+  font-size: clamp(14px, 1vw, 45px);
+}
+
+.logo-responsive {
+  height: clamp(60px, 1vw, 120px);
+}
+
 .bg-purple {
   background: var(--color-purple);
 }
