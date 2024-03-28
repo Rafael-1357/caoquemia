@@ -14,6 +14,8 @@
         extend: {
           colors: {
             clifford: '#da373d',
+            'project-yellow': '#ffc149',
+            'project-white': '#f7f5fa',
           },
           keyframes: {
             'spin-in': {
@@ -96,10 +98,14 @@
       <button id="btn-menu" class="w-[30px] h-[30px] btn-menu z-40"><i
           class="fa-brands fa-slack color-yellow text-[30px]"></i></button>
     </header>
-    <div class="w-full h-screen bg-[url(./src/imgs/bg-c1.png)] bg-no-repeat bg-position overflow-hidden relative">
+    <div
+      class="w-full h-screen relative px-[10%] bg-[url(./src/imgs/bg-c1.png)] bg-no-repeat bg-position flex flex-col justify-center overflow-hidden">
+      <div class="w-20 h-3 rounded-md bg-project-yellow"></div>
+      <h1 class="w-1/2 text-5xl color-white gilroy font-light my-5">Uma vida mais feliz para <m
+          class="cherry text-project-yellow">você</m> e para seu <m class="cherry text-project-yellow">pet<m>
+      </h1>
+      <button class="w-1/3 h-10 text-project-white gilroy border-2 rounded-full cursor-pointer animate-bounce">Marcar consulta</button>
       <img class="corgi animate-in-button sm:animate-in-right" src="./src/imgs/dog-c1.png" alt="Corgi">
-    </div>
-    <div class="w-full h-screen">
     </div>
   </main>
 
