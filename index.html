@@ -16,6 +16,7 @@
             clifford: '#da373d',
             'project-yellow': '#ffc149',
             'project-white': '#f7f5fa',
+            'project-purple': '#772fa5',
           },
           keyframes: {
             'spin-in': {
@@ -34,7 +35,7 @@
               '0%': { transform: 'translateX(-500px)' },
               '100%': { transform: 'translateX(0px)' },
             },
-            'in-button': {
+            'in-bottom': {
               '0%': { transform: 'translateY(500px)' },
               '100%': { transform: 'translateY(0px)' },
             }
@@ -43,8 +44,11 @@
             'spin-in': 'spin-in 0.5s ease-out',
             'spin-out': 'spin-out 0.5s ease-in',
             'in-right': 'in-right 0.5s ease-in-out',
-            'in-left': 'in-left 0.5s ease-in-out',
-            'in-button': 'in-button 0.5s ease-in-out',
+            'in-right-1000': 'in-right 1s ease-in-out',
+            'in-left': 'in-left 0.75s ease-in-out',
+            'in-left-1000': 'in-left 1s ease-in-out ',
+            'in-left-1200': 'in-left 1.2s ease-in-out ',
+            'in-bottom': 'in-bottom 0.5s ease-in-out',
           }
         }
       }
@@ -54,12 +58,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./src/styles/index.css">
 
-  <!-- Google fonts | Cherry Bomb -->
+  <!-- Google Fonts | Cherry Bomb -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
 
-  <!-- Github font | Gilroy -->
+  <!-- Github Font | Gilroy -->
   <link rel="stylesheet"
     href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
 
@@ -100,16 +104,49 @@
     </header>
     <div
       class="w-full h-screen relative px-[10%] bg-[url(./src/imgs/bg-c1.png)] bg-no-repeat bg-position flex flex-col justify-center overflow-hidden">
+      <div class="mb-14 sm:mb-0">
+        <div class="w-20 h-3 rounded-md bg-project-yellow animate-in-left"></div>
+        <h1 class="w-full font-responsive-c1 color-white gilroy font-light my-5 sm:w-1/2 animate-in-left-1000">Uma vida
+          mais feliz para
+          <m class="cherry text-project-yellow">você</m> e para seu <m class="cherry text-project-yellow">pet<m>
+        </h1>
+        <button
+          class="w-2/3 h-10 text-project-white gilroy border-2 rounded-full cursor-pointer animate-in-left-1200 sm:w-1/3">Marcar
+          consulta</button>
+      </div>
+      <img class="corgi w-3/4 animate-in-bottom sm:animate-in-right-1000 sm:w-[40%]" src="./src/imgs/dog-c1.png"
+        alt="Corgi">
+    </div>
+    <div class="w-full h-screen p-[10%] hidden">
       <div class="w-20 h-3 rounded-md bg-project-yellow"></div>
-      <h1 class="w-1/2 text-5xl color-white gilroy font-light my-5">Uma vida mais feliz para <m
-          class="cherry text-project-yellow">você</m> e para seu <m class="cherry text-project-yellow">pet<m>
-      </h1>
-      <button class="w-1/3 h-10 text-project-white gilroy border-2 rounded-full cursor-pointer animate-bounce">Marcar consulta</button>
-      <img class="corgi animate-in-button sm:animate-in-right" src="./src/imgs/dog-c1.png" alt="Corgi">
+      <h1 class="gilroy font-responsive-c1">Conheça nosso serviços</h1>
+      <div id="teste" class="flex mt-10 justify-center gap-12">
+        <div class="w-40 h-40 rounded-full bg-project-purple flex justify-center items-center flex-col services">
+          <i class="text-5xl text-project-white fa-solid fa-syringe"></i>
+          <p class="gilroy text-lg text-project-white">Vacinas</p>
+        </div>
+        <div class="w-40 h-40 rounded-full bg-project-purple flex justify-center items-center flex-col services">
+          <i class="text-5xl text-project-white fa-solid fa-user-nurse"></i>
+          <p class="gilroy text-lg text-project-white">Internação</p>
+        </div>
+        <div class="w-40 h-40 rounded-full bg-project-purple flex justify-center items-center flex-col services">
+          <i class="text-5xl text-project-white fa-solid fa-solid fa-eye"></i>
+          <p class="gilroy text-lg text-project-white">Ultrassonografia</p>
+        </div>
+        <div class="w-40 h-40 rounded-full bg-project-purple flex justify-center items-center flex-col services">
+          <i class="text-5xl text-project-white fa-solid fa-bed-pulse"></i>
+          <p class="gilroy text-lg text-project-white">Cirurgias</p>
+        </div>
+        <div class="w-40 h-40 rounded-full bg-project-purple flex justify-center items-center flex-col services">
+          <i class="text-5xl text-project-white fa-solid fa-hospital"></i>
+          <p class="gilroy text-lg text-project-white">Estrutura</p>
+        </div>
+      </div>
     </div>
   </main>
 
   <script src="./src/scripts/index.js"></script>
+  <script src="./src/scripts/animations.js"></script>
 </body>
 
 </html>
