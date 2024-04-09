@@ -20,7 +20,7 @@
             'project-yellow': '#ffc149',
             'project-white': '#f7f5fa',
             'project-purple': '#772fa5',
-            'project-grey': '#1d1d1def',
+            'project-grey': '#151515ef',
           },
           fontFamily: {
             'cherry': 'Cherry Bomb One',
@@ -31,6 +31,10 @@
           },
           backgroundSize: {
             '100%': 'auto 100%',
+            '100vh': '100% 100vh',
+          },
+          backgroundPosition: {
+            'left-40': '-40vw',
           },
           keyframes: {
             'spin-in': {
@@ -63,11 +67,12 @@
 </head>
 
 <body>
-  <main class="w-full h-screen relative antialiased bg-purple bg-no-repeat bg-right	bg-100% lg:bg-left">
+  <main class="w-full h-screen relative antialiased bg-purple bg-no-repeat bg-right	bg-100% lg:bg-left-40 lg:bg-100vh">
     <header class="w-full h-[120px] flex fixed top-0 left-0 right-0">
       <div class="w-full h-full relative p-3 flex justify-between lg:px-[80px]">
         <img class="z-20 lg:mr-20" src="./src/imgs/logo_caoquemia_white.webp" alt="Logo - Cão que mia">
-        <nav id="nav" class="hidden h-auto absolute top-0 left-0 right-0 p-5 rounded-b-[16px] bg-project-grey flex flex-col justify-between items-center lg:w-full lg:h-auto lg:relative lg:p-0 lg:bg-inherit lg:flex lg:flex-row">
+        <nav id="nav"
+          class="hidden h-auto absolute top-0 left-0 right-0 p-5 rounded-b-[16px] bg-project-grey flex flex-col justify-between items-center lg:w-full lg:h-auto lg:relative lg:p-0 lg:bg-inherit lg:flex lg:flex-row">
           <div class="w-fit pt-[120px] text-xl font-gilroy list-none flex flex-col lg:p-0 lg:flex-row">
             <li class="p-4 text-project-white"><a href="#">Home</a></li>
             <li class="p-4 text-project-white"><a href="#">Serviços</a></li>
@@ -88,9 +93,22 @@
             </button>
           </div>
         </nav>
-        <button id="btnMenu" class="z-10"><i class="fa-brands fa-slack text-project-yellow text-[30px] lg:hidden"></i></button>
+        <button id="btnMenu" class="z-10"><i
+            class="fa-brands fa-slack text-project-yellow text-[30px] lg:hidden"></i></button>
       </div>
     </header>
+    <div class="mx-5">
+      <div class="w-full h-screen flex flex-col justify-center items-left gap-5 sm:w-[50%]">
+        <span class="w-28 h-4 rounded-full bg-project-yellow"></span>
+        <h1 class="text-project-white font-gilroy text-4xl">
+          Uma vida mais feliz para <m class="font-cherry text-project-yellow">você</m> e para seu <m class="font-cherry text-project-yellow">pet</m>
+        </h1>
+        <button class="w-fit text-project-white font-gilroy text-xl mb-16 p-3 border-2 rounded-full sm:mb-0 z-50">Marque sua consulta</button>
+      </div>
+      <div class="absolute right-0 bottom-0 flex justify-center sm:w-[40%]">
+        <img src="./src/imgs/dog-c1.png" alt="Corgi" class=" w-11/12">
+      </div>
+    </div>
   </main>
 
   <script src="./src/scripts/index.js"></script>
