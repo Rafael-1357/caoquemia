@@ -16,7 +16,6 @@
       theme: {
         extend: {
           colors: {
-            clifford: '#da373d',
             'project-yellow': '#ffc149',
             'project-white': '#f7f5fa',
             'project-purple': '#772fa5',
@@ -46,7 +45,19 @@
             'spin-in': 'spin-in 0.5s ease-out',
           },
           screens: {
-            'ms': '320px',
+            'ms': '375px',
+            'tall': {
+              'raw': `only screen and (max-height: 960px) and (max-width: 480px)`
+            },
+            'wide': {
+              'raw': `only screen and (max-height: 480px) and (max-width: 960px)`
+            },
+            'portrait': {
+              'raw': '(orientation: portrait)'
+            },
+            'landscape': {
+              'raw': '(orientation: landscape)'
+            }
           },
         }
       }
@@ -70,7 +81,8 @@
 </head>
 
 <body>
-  <main class="w-full h-screen relative antialiased bg-purple bg-no-repeat bg-right	bg-100% xl:bg-left-40 xl:bg-100vh">
+  <main
+    class="w-full h-screen relative antialiased bg-purple bg-no-repeat bg-right	bg-100% landscape:bg-left-40 landscape:bg-100vh">
     <header class="w-full h-[100px] flex fixed top-0 left-0 right-0 xl:h-[120px] 2xl:h-[140px]">
       <div class="w-full h-full relative p-3 flex justify-between sm:px-[50px] lg:px-[80px]">
         <img class="lg:mr-5 z-50" src="./src/imgs/logo_caoquemia_white.webp" alt="Logo - Cão que mia">
@@ -101,18 +113,21 @@
             class="fa-brands fa-slack text-project-yellow text-[30px] lg:hidden"></i></button>
       </div>
     </header>
-    <div class="mx-5 h-screen flex flex-col sm:gap-16 xl:gap-3 justify-end sm:px-[50px] lg:mx-0 lg:px-[80px] xl:justify-between">
-      <div class="w-full flex flex-col justify-center items-left gap-5 xl:w-[50%] lg:gap-12">
+    <div
+      class="mx-5 h-screen flex flex-col sm:gap-16 xl:gap-3 justify-end sm:px-[50px] lg:mx-0 lg:px-[80px] landscape:flex-row xl:justify-between">
+      <div class="w-full flex flex-col justify-center items-left gap-7 landscape:w-[50%] lg:gap-12">
         <span class="w-28 h-4 rounded-full bg-project-yellow"></span>
-        <h1 class="w-11/12 sm:w-full text-project-white font-gilroy text-6xl lg:text-7xl">
-          Uma vida mais feliz para <m class="font-cherry text-project-yellow">você</m> e para seu <m
+        <h1 class="w-11/12 sm:w-full text-project-white font-gilroy text-[11vw] landscape:text-[4vw] leading-none">
+          Uma vida mais feliz para <m class="font-cherry text-project-yellow">você</m> e seu <m
             class="font-cherry text-project-yellow">pet</m>
         </h1>
-        <button class="w-fit text-project-white font-gilroy text-xl sm:text-3xl ms:mb-16 p-3 border-2 rounded-full sm:mb-0">Marque sua
-          consulta</button>
+        <button
+          class="w-fit text-project-white font-gilroy text-xl sm:text-2xl mb-12 p-2 border-2 rounded-full sm:mb-0">
+          Marque sua consulta
+        </button>
       </div>
-      <div class="flex justify-center items-end xl:w-[40%] ">
-        <img src="./src/imgs/dog-c1.png" alt="Corgi" class="w-full sm:w-10/12 h-fit xl:w-full">
+      <div class="flex justify-center items-end landscape:w-[40%]">
+        <img src="./src/imgs/dog-c1.png" alt="Corgi" class="w-9/12 h-fit xl:w-full">
       </div>
     </div>
   </main>
